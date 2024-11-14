@@ -18,27 +18,3 @@ export function Button({ children, className, ...rest }: ButtonProps) {
     </button>
   );
 }
-
-export function Sex() {
-  const text = "some text";
-
-  return (
-    <>
-      <h2 className={"my-class" + (1 > 2 ? "first-letter:m-2" : "")}>
-        some text here
-      </h2>
-      <h2
-        className={clsx("some-class", {
-          "outline-inherit": 1 > 2,
-        })}
-      >
-        some {text}
-      </h2>
-      {text === "some text" ? (
-        <Button children={<Search placeholder="" />}></Button>
-      ) : (
-        <Search placeholder="search text" />
-      )}
-    </>
-  );
-}
